@@ -22,5 +22,6 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/cookbook'
 
-# Загружаем кастомные задачи из `lib/capistrano/tasks', если они определены
+# Загружаем кастомные задачи из `lib/capistrano/tasks`, если они определены
+
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
