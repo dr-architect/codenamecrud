@@ -38,7 +38,6 @@ end
 group :development do
   gem 'web-console', '~> 2.1'
   gem 'bullet'
-  gem 'capistrano', github: 'capistrano/capistrano', ref: '96a16'
   gem 'guard', require: false
   gem 'guard-bundler', require: false
   gem 'guard-livereload', require: false
@@ -50,6 +49,13 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubycritic', require: false
   gem 'traceroute'
+
+  # Deployment
+  gem 'capistrano', '~>3.4.0'
+  gem 'capistrano-rails', '~>1.1.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-cookbook', require: false
 end
 
 group :test do
@@ -66,7 +72,7 @@ end
 
 group :production do
   gem 'newrelic_rpm'
-  gem 'unicorn'
+  gem 'unicorn', '~> 4.8.3'
 end
 
 source 'https://rails-assets.org' do
